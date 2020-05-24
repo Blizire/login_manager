@@ -1,0 +1,17 @@
+# setup env
+git init
+mkdir src
+mkdir venv
+py -3 -m venv venv
+echo "" >> README.md
+echo "" >> .gitignore
+.\venv\Scripts\activate
+# note if using cmd "set" is used to put in env vars
+$Env:FLASK_APP = "src/app.py"
+$Env:FLASK_ENV = "development"
+$Env:SECRET_KEY = ":yGYs3ujT2n!+snV'8L3X]82{=(B3K4>"
+# to start webserver
+flask run
+
+# dependencies
+pip install flask

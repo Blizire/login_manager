@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta lang="en">
+		<meta charset="UTF-8">
+		<title>Login Manager</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'home.css') }}">
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="form_wrapper">
+				<form action="/" method="post">
+					<div>
+						<span class="resp_style">USERNAME</span>
+						<input class="resp_style" type="text" id="username_input" name="username" autocomplete="false">
+					</div>
+
+					<div>
+						<span class="resp_style">PASSWORD</span>
+						<input class="resp_style" type="password" id="password_input" name="password" autocomplete="false">
+					</div>
+				</form>
+				<div id="button_wrapper">
+					<button class="resp_style" onclick="register()">REGISTER</button>
+					<button class="resp_style" onclick="login()">LOGIN</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			function register(){
+				document.querySelector("form").action = "/register";
+				document.querySelector("form").submit();
+			}
+			function login(){
+				document.querySelector("form").action = "/login";
+				document.querySelector("form").submit(); 
+			}
+		</script>
+	</body>
+</html>
