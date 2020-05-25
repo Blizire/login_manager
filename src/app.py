@@ -1,7 +1,12 @@
 #!/usr/bin/env python
 import os
 import sqlite3
+import db
 from flask import Flask, render_template, url_for, request, redirect
+
+# Author      : Trenton Stiles
+# Name        : app.py
+# Description : Handles all web routing here.
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
